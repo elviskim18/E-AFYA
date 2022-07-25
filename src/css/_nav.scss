@@ -22,6 +22,25 @@
         background-color: red;
         margin-left: 10px;
     }
+    .Navlinks{
+        margin-top: 30px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .linkstyles{
+           margin-left: 10px;
+           text-decoration: none;
+           width: 270px;
+           text-align: center;
+           padding: 25px;
+           color: white;
+           background-color: $color-theme;
+           border: 1px solid black;
+           border-radius: 12px;
+           font-size: 1.5em;
+        }
+    }
     
 
 }

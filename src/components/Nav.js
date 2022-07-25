@@ -2,15 +2,7 @@ import React from "react";
 import {NavLink } from "react-router-dom";
 import { FaHospitalAlt,FaUserCircle} from "react-icons/fa";
 
-const linkStyles = {
-    display: "inline-block",
-    width: "50px",
-    padding: "12px",
-    margin: "0 6px 6px",
-    background: "blue",
-    textDecoration: "none",
-    color: "white",
-  };
+
 
 function Nav (){
     return (
@@ -30,15 +22,15 @@ function Nav (){
           </h2>
         </div>
         <div className="Navlinks">
-          <NavLink to="home" exact style={linkStyles}>
+          <NavLink to="home" exact className="linkstyles">
             Home
           </NavLink>
 
-          <NavLink to="newpatient" exact style={linkStyles}>
+          <NavLink to="newpatient" exact className="linkstyles">
             Add New Patient
           </NavLink>
-          
-          <NavLink to="patientrecords" exact style={linkStyles}>
+
+          <NavLink to="patientrecords" exact className="linkstyles">
             Patient Records
           </NavLink>
         </div>
