@@ -1,11 +1,10 @@
 import React from "react";
 
-function Patient (){
+function Patient ({patient}){
     return (
         <ul>
-            <li className="patient">Patient One <span>Gender</span></li>
-            <li className="patient">Patient One <span>Gender</span></li>
-            <li className="patient">Patient One <span>Gender</span></li>
+            <li className="patient">{patient.name} <span>{patient.gender}</span></li>
+            
         </ul>
             
         

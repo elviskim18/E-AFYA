@@ -3,7 +3,7 @@ import Patient from "./Patient";
 
 
 
-function PatientRecords (){
+function PatientRecords ({patients}){
     return (
         <div>
             <h1 className="header">PATIENT RECORDS</h1>
@@ -15,7 +15,10 @@ function PatientRecords (){
                 </select>
             </div>
             <div className="pRecords">
-                <Patient /> 
+                {patients.map((patient)=>{
+                    return <Patient  key={patient.id}patient={patient}/>
+                })}
+                 
             </div>
 
         </div>
