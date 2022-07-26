@@ -7,12 +7,13 @@
        h2{
            font-size: 1.8em;
            margin-left: 80px;
+           
            padding: 20px;
-           ::before{
-               content: "";
-               background-color: black;
-               width: 3%;
-               height: 20%;
+           &::before{
+               content: ">>";
+               margin-right: 20px;
+               width: 30px;
+               height: 30px;
            }
        }
        .dcontainer{

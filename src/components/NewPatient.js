@@ -25,7 +25,7 @@ function NewPatient (){
 
                         <div className="element">
                             <label for="contact">Contacts</label>
-                            <input type="number" name="contact" placeholder="email"/>
+                            <input type="text" name="contact" placeholder="Phone number"/>
                         </div>
 
                         <div className="element">
