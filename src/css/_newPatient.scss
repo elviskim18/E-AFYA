@@ -1,1 +1,50 @@
 @import "./variables";
+
+
+.newPatient{
+    .formPatient{
+        height: 700px;
+        h2 {
+            font-size: 1.3em;
+            margin-left: 80px;
+            padding: 20px;
+            span{
+                font-size: 2em;
+                color: $color-theme;
+            }
+        }
+        form{
+            padding: 10px;
+            .button{
+                padding: 13px 20px;
+                background-color: black;
+                color: white;
+                
+            }
+            
+            .formelements{
+                display: grid;
+                grid-template-columns: auto auto auto;
+                gap: 5px ;
+                .element{
+                    padding: 50px;
+                    select{
+                        
+                         margin-left: 10px;
+                    
+                    }
+                    input{
+                        padding: 20px;
+                        margin-left: 20px;
+                        border-radius: 10px;
+                        border: 1px solid black;
+        
+                    }
+                    
+                }
+            }
+        }
+      
+        
+    }
+}
