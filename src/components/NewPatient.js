@@ -2,7 +2,10 @@ import React from "react";
 
 function NewPatient (){
     return (
-        <h1>I am going to be new</h1>
+        <div className="header">
+            <h1>NEW PATIENT</h1>
+        </div>
+        
     )
 }
 

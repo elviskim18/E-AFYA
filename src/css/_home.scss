@@ -1,0 +1,12 @@
+@import "./variables";
+
+.home{
+    h1{
+        background-color: $color-theme;
+        color: white;
+        text-align: center;
+        margin-top: 0;
+        padding: 30px;
+    }
+}
+
