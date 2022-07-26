@@ -2,7 +2,11 @@ import React from "react";
 
 function PatientRecords (){
     return (
-        <h2>I am records</h2>
+        <div>
+            <h1 className="header">PATIENT RECORDS</h1>
+
+        </div>
+        
     )
 }
 

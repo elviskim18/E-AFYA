@@ -1,6 +1,6 @@
 import React from "react";
 import {NavLink } from "react-router-dom";
-import { FaHospitalAlt,FaUserCircle} from "react-icons/fa";
+import { FaUserCircle, FaHandHoldingMedical} from "react-icons/fa";
 
 
 
@@ -10,16 +10,11 @@ function Nav (){
         <h1>
           E-AFYA
           <span>
-            <FaHospitalAlt />
+            <FaHandHoldingMedical />
           </span>
         </h1>
         <div className="profile">
-          <h2>
-            Paul Kimani
-            <span>
-              <FaUserCircle />
-            </span>
-          </h2>
+          <h3><span><FaUserCircle /></span>Paul kimani</h3>
         </div>
         <div className="Navlinks">
           <NavLink to="home" exact className="linkstyles">

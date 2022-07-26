@@ -4,3 +4,13 @@ $color-dark:#454242;
 $color-theme:#4ECB71;
 $color-male:blue;
 $color-female:pink;
+
+//header styling
+
+.header{
+    background-color: $color-theme;
+        color: white;
+        text-align: center;
+        margin-top: 10px;
+        padding: 30px;
+}
