@@ -1,46 +1,81 @@
-import React from "react";
+import React, {useState} from "react";
 import { FaUserPlus} from "react-icons/fa"
 
 
-function NewPatient (){
+function NewPatient ({addNewpatient}){
+    const [formdata ,setformdata] = useState({
+        name: "",
+        gender: "",
+        number: "" ,
+        dob: "",
+        weight: "",
+        bloodgroup: "",
+        symptoms: "",
+        diagnosis:""
+    })
+
+   //handlechange
+    function handleChange (event){
+        const name = event.target.name;
+        let value = event.target.value;
+        setformdata({
+            ...formdata,
+            [name]:value
+        })
+    }
+
+    //handle submit
+    function handleSubmit(event){
+        event.preventDefault();
+        addNewpatient(formdata)
+        console.log(formdata)
+
+
+    }
+
+
+
     return (
         <div className="newPatient">
             <h1 className="header">NEW PATIENT</h1>
             <div className="formPatient">
                 <h2><span><FaUserPlus/></span>  ADD NEW PATIENT</h2>
-                <form >
+                <form onSubmit={handleSubmit}>
                     <div className="formelements">
                         <div className="element">
-                            <label for="name">First Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your name.."/>
+                            <label >First Name
+                            <input type="text" id="name" name="name" value={formdata.name} placeholder="Your name.." onChange={handleChange}/>
+                            </label>
                         </div>
 
                         <div className="element">
-                            <label for="gender">Gender</label>
-                            <select id="gender" name="gender">
+                            <label >Gender
+                            <select id="gender" name="gender" value={formdata.gender} onChange={handleChange}>
                                 <option value="male">Male</option>
                                 <option value="female">Female</option>
                             </select>
+                            </label>
                         </div>
 
                         <div className="element">
-                            <label for="contact">Contacts</label>
-                            <input type="text" name="contact" placeholder="Phone number"/>
+                            <label>Contacts
+                            <input type="text" name="number" value={formdata.number}  placeholder="Phone number" onChange={handleChange}/>
+                            </label>
                         </div>
 
                         <div className="element">
-                            <label for="birthday">Date Of Birth</label>
-                            <input type="date" name="birthday"/>
+                            <label htmlFor="birthday">Date Of Birth</label>
+                            <input type="date" value={formdata.dob} name="dob" onChange={handleChange} />
                         </div>
 
                         <div className="element">
-                            <label for="weight">WEIGHT</label>
-                            <input type="number" name="weight"/>
+                            <label htmlFor="weight">WEIGHT</label>
+                            <input type="number" name="weight" value={formdata.weight} onChange={handleChange} />
                         </div>
 
                         <div className="element">
-                            <label for="blood">BLOOD GROUP</label>
-                            <select id="blood" name="blood">
+                            <label htmlFor="bloodgroup">BLOOD GROUP</label>
+                            <select id="blood" name="bloodgroup" value={formdata.bloodgroup} onChange={handleChange} >
                                 <option value="a">A</option>
                                 <option value="b">B</option>
                                 <option value="ab">AB</option>
@@ -49,13 +84,13 @@ function NewPatient (){
                         </div>
 
                         <div className="element">
-                            <label for="symptoms">SYMPTOMS</label>
-                            <input type="text" name="symptoms" />
+                            <label htmlFor="symptoms">SYMPTOMS</label>
+                            <input type="text" name="symptoms" value={formdata.symptoms} onChange={handleChange} />
                         </div>
 
                         <div className="element">
-                            <label for="diagnosis">DIAGNOSIS</label>
-                            <input type="text" name="diagnosis" />
+                            <label htmlFor="diagnosis">DIAGNOSIS</label>
+                            <input type="text" name="diagnosis" value={formdata.diagnosis}onChange={handleChange} />
                         </div>
                         
                     </div>

@@ -17,15 +17,15 @@ function Nav (){
           <h3><span><FaUserCircle /></span>Paul kimani</h3>
         </div>
         <div className="Navlinks">
-          <NavLink to="home" exact className="linkstyles">
+          <NavLink to="/"  className="linkstyles">
             Home
           </NavLink>
 
-          <NavLink to="newpatient" exact className="linkstyles">
+          <NavLink to="newpatient"  className="linkstyles">
             Add New Patient
           </NavLink>
 
-          <NavLink to="patientrecords" exact className="linkstyles">
+          <NavLink to="patientrecords"  className="linkstyles">
             Patient Records
           </NavLink>
         </div>

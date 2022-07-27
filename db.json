@@ -1,60 +1,81 @@
 {
-    "patients":[
-        {
-            "id":1,
-            "name": "John Doe",
-            "gender": "male",
-            "number": 254741791922 ,
-            "dob": "",
-            "weight": 60,
-            "bloodgroup": "A",
-            "symptoms": "Mild Cough. High fever",
-            "diagnosis":"Phenemonia"
-        },
-        {
-            "id":2,
-            "name": "Mary Doe",
-            "gender": "male",
-            "number": 254741780922 ,
-            "dob": "",
-            "weight": 56,
-            "bloodgroup": "A",
-            "symptoms": "Mild Cough. High fever",
-            "diagnosis":"Phenemonia"
-        },
-        {
-            "id":3,
-            "name": "Sarah Doe",
-            "gender": "female",
-            "number": 254721780932 ,
-            "dob": "",
-            "weight": 55,
-            "bloodgroup": "A",
-            "symptoms": "Mild Cough. High fever",
-            "diagnosis":"Phenemonia"
-        },
-        {
-            "id":4,
-            "name": "Dan Doe",
-            "gender": "male",
-            "number": 254731780772 ,
-            "dob": "",
-            "weight": 76,
-            "bloodgroup": "B",
-            "symptoms": "Mild Cough. High fever",
-            "diagnosis":"Phenemonia"
-        },
-        {
-            "id":5,
-            "name": "Fred Doe",
-            "gender": "male",
-            "number": 254722768932 ,
-            "dob": "",
-            "weight": 71,
-            "bloodgroup": "AB",
-            "symptoms": "Mild Cough. High fever",
-            "diagnosis":"Phenemonia"
-        }
-    ]
-    
+  "patients": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "gender": "male",
+      "number": 254741791922,
+      "dob": "",
+      "weight": 60,
+      "bloodgroup": "A",
+      "symptoms": "Mild Cough. High fever",
+      "diagnosis": "Phenemonia"
+    },
+    {
+      "id": 2,
+      "name": "Mary Doe",
+      "gender": "male",
+      "number": 254741780922,
+      "dob": "",
+      "weight": 56,
+      "bloodgroup": "A",
+      "symptoms": "Mild Cough. High fever",
+      "diagnosis": "Phenemonia"
+    },
+    {
+      "id": 3,
+      "name": "Sarah Doe",
+      "gender": "female",
+      "number": 254721780932,
+      "dob": "",
+      "weight": 55,
+      "bloodgroup": "A",
+      "symptoms": "Mild Cough. High fever",
+      "diagnosis": "Phenemonia"
+    },
+    {
+      "id": 4,
+      "name": "Dan Doe",
+      "gender": "male",
+      "number": 254731780772,
+      "dob": "",
+      "weight": 76,
+      "bloodgroup": "B",
+      "symptoms": "Mild Cough. High fever",
+      "diagnosis": "Phenemonia"
+    },
+    {
+      "id": 5,
+      "name": "Fred Doe",
+      "gender": "male",
+      "number": 254722768932,
+      "dob": "",
+      "weight": 71,
+      "bloodgroup": "AB",
+      "symptoms": "Mild Cough. High fever",
+      "diagnosis": "Phenemonia"
+    },
+    {
+      "name": "Martin Luke",
+      "gender": "",
+      "number": "2547922222",
+      "dob": "2022-07-17",
+      "weight": "45",
+      "bloodgroup": "o",
+      "symptoms": "Diarhoea",
+      "diagnosis": "food poisosning",
+      "id": 6
+    },
+    {
+      "name": "junet tambo",
+      "gender": "male",
+      "number": "2547922222",
+      "dob": "2022-07-05",
+      "weight": "34",
+      "bloodgroup": "b",
+      "symptoms": "asfwefwef",
+      "diagnosis": "errere",
+      "id": 7
+    }
+  ]
 }
