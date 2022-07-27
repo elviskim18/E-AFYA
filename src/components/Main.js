@@ -34,17 +34,26 @@ function Main (){
 
      //search function
      function getSearch (str){
-         if(str.length > 0){
-
-             const newvalue = patients.filter((pat) => {
-                return pat.name.toLowerCase().includes(str.toLowerCase())
-              })
+         if(str === ""){
+            getPatients()
+          }else{
+              const newvalue = patients.filter((pat) =>  pat.name.toLowerCase().includes(str.toLowerCase()))
               setpatients(newvalue)
-
-         }
+              
+          }
+         
       }
+
+    //filter function
+    function filterPatients (str){
+        const newItems = patients.filter((pat)=> {
+            if(str === "all") return true;
+            return pat.gender === str
+        })
+        setpatients(newItems)
+    }
     
-      
+
     //useEffect
     useEffect(() =>{
         getPatients()
@@ -56,7 +65,7 @@ function Main (){
     return(
         <div className="Main">
             <Routes>
-                <Route  path="/patientrecords" element={<PatientRecords patients={patients} getSearch={getSearch}/>}/>
+                <Route  path="/patientrecords" element={<PatientRecords patients={patients} getSearch={getSearch} filterPatients={filterPatients} />}/>
             
             
                 <Route  path="/newpatient" element={<NewPatient  addNewpatient={addNewpatient}/>}/>

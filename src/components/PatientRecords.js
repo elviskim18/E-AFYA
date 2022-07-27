@@ -3,17 +3,24 @@ import Patient from "./Patient";
 
 
 
-function PatientRecords ({patients,getSearch}){
+function PatientRecords ({patients,getSearch,filterPatients}){
     const [seachvalue , setsearchvalue] = useState("")
+    const [selectedCategory, setSelectedCategory] = useState("all");
 
     function handleSearch(e){
         e.preventDefault();
-        const data = e.target.value
-       
-        setsearchvalue(data)
-        getSearch(seachvalue)
-        
-        
+        setsearchvalue(e.target.value)
+        const seachdata = e.target.value
+        getSearch(seachdata)
+      }
+
+      //filter
+      function handleCategoryChange(event) {
+          console.log("ni mimi:",event.target.value)
+          setSelectedCategory(event.target.value);
+          const selekta = event.target.value
+          console.log(selekta)
+          filterPatients(selekta)
       }
 
     return (
@@ -23,7 +30,8 @@ function PatientRecords ({patients,getSearch}){
 
                 <input type="text" placeholder= "Search" value={seachvalue} onChange={handleSearch}/>
 
-                <select name="filter" >
+                <select name="filter" value={selectedCategory} onChange={handleCategoryChange}>
+                    <option value="all">ALL</option>
                     <option value="male">MALE</option>
                     <option value="female">FEMALE</option>
                 </select>

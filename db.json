@@ -76,6 +76,28 @@
       "symptoms": "asfwefwef",
       "diagnosis": "errere",
       "id": 7
+    },
+    {
+      "name": "Linda Gates",
+      "gender": "female",
+      "number": "254741864744",
+      "dob": "2022-07-05",
+      "weight": "56",
+      "bloodgroup": "ab",
+      "symptoms": "Hot like a heater",
+      "diagnosis": "take water",
+      "id": 8
+    },
+    {
+      "name": "Linda Gates",
+      "gender": "female",
+      "number": "254741864744",
+      "dob": "2022-07-05",
+      "weight": "56",
+      "bloodgroup": "ab",
+      "symptoms": "Hot like a heater",
+      "diagnosis": "take water",
+      "id": 9
     }
   ]
 }
