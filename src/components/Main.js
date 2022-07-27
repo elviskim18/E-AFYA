@@ -16,7 +16,6 @@ function Main (){
     function getPatients (){
         axios.get(url).then((resp) => {
           const pat = resp.data
-          console.log(pat)
           setpatients(pat)
         })
       
@@ -32,7 +31,20 @@ function Main (){
 
 
      }
+
+     //search function
+     function getSearch (str){
+         if(str.length > 0){
+
+             const newvalue = patients.filter((pat) => {
+                return pat.name.toLowerCase().includes(str.toLowerCase())
+              })
+              setpatients(newvalue)
+
+         }
+      }
     
+      
     //useEffect
     useEffect(() =>{
         getPatients()
@@ -44,7 +56,7 @@ function Main (){
     return(
         <div className="Main">
             <Routes>
-                <Route  path="/patientrecords" element={<PatientRecords patients={patients}/>}/>
+                <Route  path="/patientrecords" element={<PatientRecords patients={patients} getSearch={getSearch}/>}/>
             
             
                 <Route  path="/newpatient" element={<NewPatient  addNewpatient={addNewpatient}/>}/>
