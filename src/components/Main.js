@@ -46,11 +46,20 @@ function Main (){
 
     //filter function
     function filterPatients (str){
+        getPatients()
         const newItems = patients.filter((pat)=> {
-            if(str === "all") return true;
-            return pat.gender === str
+            if(str === "all") {
+                return true
+            }else {
+                return pat.gender === str
+            }
         })
-        setpatients(newItems)
+        
+        console.log("beferesetting me",newItems)
+        setpatients((newItems)=>newItems)
+        console.log("aftersetting:",newItems)
+        
+        
     }
     
 

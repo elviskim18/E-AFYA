@@ -1,9 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 
-function Patient ({patient}){
+function Patient ({patient,setdata}){
+    
+
+    
     return (
         <ul>
-            <li className="patient">{patient.name} <span>{patient.gender}</span></li>
+            <li onClick={()=> setdata(patient)} className="patient">{patient.name} <span>{patient.gender}</span></li>
             
         </ul>
             

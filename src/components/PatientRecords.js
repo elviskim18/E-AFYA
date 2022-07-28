@@ -6,6 +6,7 @@ import Patient from "./Patient";
 function PatientRecords ({patients,getSearch,filterPatients}){
     const [seachvalue , setsearchvalue] = useState("")
     const [selectedCategory, setSelectedCategory] = useState("all");
+    const [data, setdata] = useState({})
 
     function handleSearch(e){
         e.preventDefault();
@@ -16,10 +17,11 @@ function PatientRecords ({patients,getSearch,filterPatients}){
 
       //filter
       function handleCategoryChange(event) {
-          console.log("ni mimi:",event.target.value)
+          event.preventDefault()
+        //   console.log("target:",event.target.value)
+
           setSelectedCategory(event.target.value);
           const selekta = event.target.value
-          console.log(selekta)
           filterPatients(selekta)
       }
 
@@ -30,7 +32,7 @@ function PatientRecords ({patients,getSearch,filterPatients}){
 
                 <input type="text" placeholder= "Search" value={seachvalue} onChange={handleSearch}/>
 
-                <select name="filter" value={selectedCategory} onChange={handleCategoryChange}>
+                <select name="filter"  onChange={handleCategoryChange}>
                     <option value="all">ALL</option>
                     <option value="male">MALE</option>
                     <option value="female">FEMALE</option>
@@ -38,9 +40,24 @@ function PatientRecords ({patients,getSearch,filterPatients}){
 
             </div>
             <div className="pRecords">
-                {patients.map((patient)=>{
-                    return <Patient  key={patient.id}patient={patient}/>
-                })}
+                <div className="short">
+
+                    {patients.map((patient)=>{
+                        return <Patient  key={patient.id}patient={patient} setdata={setdata}/>
+                    })}
+                </div>
+                
+                <div className="displayPat">
+                    <form>
+                        <input value={data.name} type="text" name=""/>
+                        <input value={data.gender} type="text" name=""/>
+                        <input value={data.number} type="text" name=""/>
+                        <input value={data.dob} type="date" name=""/>
+                        <button>edit</button>
+                    </form>
+
+                    
+                </div>
                  
             </div>
 
