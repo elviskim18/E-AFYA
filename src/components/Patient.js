@@ -1,12 +1,19 @@
 import React, {useState} from "react";
 
-function Patient ({patient,setdata}){
+function Patient ({patient,setdata,setvisibility ,visibility}){
     
+    function handle (){
+        setvisibility((visibility) => !visibility)
+        setdata(patient)
+        
+
+
+    }
 
     
     return (
         <ul>
-            <li onClick={()=> setdata(patient)} className="patient">{patient.name} <span>{patient.gender}</span></li>
+            <li onClick={handle} className="patient">{patient.name} <span>{patient.gender}</span></li>
             
         </ul>
             
