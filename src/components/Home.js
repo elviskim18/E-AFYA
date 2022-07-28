@@ -1,7 +1,10 @@
 import React from "react";
 import { FaRegCalendarAlt , FaProcedures, FaUserMd} from "react-icons/fa";
 
-function Home(){
+function Home({patients}){
+    const total = Object.keys(patients).length //total number of patients 
+    
+    
     return(
         <div className="home">
             <h1 className="header">HOME</h1>
@@ -9,10 +12,12 @@ function Home(){
                 <h2>DASHBOARD</h2>
                 <div className="dcontainer">
                     <div className="child">
-                        <p><span><FaUserMd/></span>    NURSES: 13</p>
+                        <p><span><FaRegCalendarAlt /></span>    TOTAL  PATIENTS: {total}</p>
+                        
                     </div>
                     <div className="child">
-                        <p><span><FaRegCalendarAlt /></span>    APPOINTMENTS: 7</p>
+                        <p><span><FaUserMd/></span>    NURSES: 13</p>
+                        
                     </div>
                     <div className="child">
                         <p><span><FaProcedures /></span>     BEDS: 17</p>

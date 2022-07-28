@@ -1,10 +1,13 @@
 import React,{useState} from "react";
 import Patient from "./Patient";
-import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 
 
-function PatientRecords ({patients,getSearch,filterPatients, updatePatient}){
+
+
+function PatientRecords ({patients,getSearch,filterPatients, updatePatient, deletePatient}){
+    let navigate = useNavigate()
     const [seachvalue , setsearchvalue] = useState("")
     const [selectedCategory, setSelectedCategory] = useState("all");
     const [view ,setview] = useState(false)
@@ -44,6 +47,12 @@ function PatientRecords ({patients,getSearch,filterPatients, updatePatient}){
         setdata({...data, [key]:value})
     
       }
+      //handle delete
+      function handleDelete (){
+        deletePatient(data.id)
+        navigate("/")
+
+      }
 
 
     return (
@@ -54,7 +63,7 @@ function PatientRecords ({patients,getSearch,filterPatients, updatePatient}){
 
                 <input type="text" placeholder= "Search" value={seachvalue} onChange={handleSearch}/>
 
-                <select name="filter"  onChange={handleCategoryChange}>
+                <select name="filter" value={selectedCategory} onChange={handleCategoryChange}>
                     <option value="all">ALL</option>
                     <option value="male">MALE</option>
                     <option value="female">FEMALE</option>
@@ -66,7 +75,7 @@ function PatientRecords ({patients,getSearch,filterPatients, updatePatient}){
                 <div className="short">
 
                     {patients.map((patient)=>{
-                        return <Patient  key={patient.id} patient={patient} setdata={setdata} setvisibility={setvisibility} visibility={visibility}/>
+                        return <Patient  key={patient.id} patient={patient} setdata={setdata} deletePatient={deletePatient} setvisibility={setvisibility} visibility={visibility}/>
                     })}
                 </div>
                 
@@ -79,6 +88,7 @@ function PatientRecords ({patients,getSearch,filterPatients, updatePatient}){
                     <p>SYMPTOMS: {data.symptoms}</p>
                     <p>DIAGNOSIS: {data.diagnosis}</p>
                     <button onClick={() => setview((view) => !view)}>UPDATE</button>
+                    <button onClick={handleDelete}>DELETE</button>
                     
                     <form style={view? {display:"block"} : {display: "none"}} onSubmit={handleEdit}>
                         <div className="styleform">

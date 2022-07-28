@@ -10,11 +10,9 @@ import axios from "axios";
 function Main (){
     const [patients ,setpatients] = useState([]);
     const url = "https://boiling-headland-76825.herokuapp.com/patients";
-    const initial = []
+    
 
-    // const clearState = () => {
-    //     setpatients(patients);
-    //   };
+   
 
 
     //get patients 
@@ -80,6 +78,13 @@ function Main (){
             console.error(error)
         }
     
+    }
+
+    //delete
+    function deletePatient (id){
+        let update = patients.filter((pat) => pat.id !== id)
+        setpatients(update);
+        axios.delete(`${url}/${id}`)
 
     }
     
@@ -95,13 +100,13 @@ function Main (){
     return(
         <div className="Main">
             <Routes>
-                <Route  path="/patientrecords" element={<PatientRecords updatePatient={updatePatient} patients={patients} getSearch={getSearch} filterPatients={filterPatients} />}/>
+                <Route  path="/patientrecords" element={<PatientRecords updatePatient={updatePatient} patients={patients} getSearch={getSearch} filterPatients={filterPatients} deletePatient={deletePatient} />}/>
             
             
                 <Route  path="/newpatient" element={<NewPatient  addNewpatient={addNewpatient}/>}/>
             
             
-                <Route  path="/" element={<Home />}/>
+                <Route  path="/" element={<Home patients={patients}/>}/>
             </Routes>
         </div>
         

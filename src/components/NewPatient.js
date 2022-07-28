@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { useNavigate } from "react-router-dom";
 import { FaUserPlus} from "react-icons/fa"
 
 
@@ -12,7 +13,8 @@ function NewPatient ({addNewpatient}){
         bloodgroup: "",
         symptoms: "",
         diagnosis:""
-    })
+    });
+    let navigate = useNavigate();
 
    //handlechange
     function handleChange (event){
@@ -28,6 +30,8 @@ function NewPatient ({addNewpatient}){
     function handleSubmit(event){
         event.preventDefault();
         addNewpatient(formdata)
+        navigate("/patientrecords")
+        
         console.log(formdata)
 
 

@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import React from "react";
 
-function Patient ({patient,setdata,setvisibility ,visibility}){
+function Patient ({patient,setdata,setvisibility ,visibility, deletePatient}){
     
     function handle (){
         setvisibility((visibility) => !visibility)
@@ -12,7 +12,7 @@ function Patient ({patient,setdata,setvisibility ,visibility}){
     
     return (
         <ul>
-            <li onClick={handle} className="patient">{patient.name} <span>{patient.gender.toUpperCase()}</span> <button>DELETE</button></li>
+            <li onClick={handle} className="patient">{patient.name} <span>{patient.gender.toUpperCase()}</span> </li>
             
         </ul>
             

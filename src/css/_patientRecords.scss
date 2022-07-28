@@ -85,10 +85,7 @@
         width: 40%;
     }
     ul{
-        button{
-            background-color: rgb(244, 103, 103);
-            float: right;
-        }
+        
         list-style: none;
         .patient{
             width: 80%;
@@ -97,7 +94,7 @@
             background-color: white;
             margin-bottom: 20px;
             span{
-                margin-left: 100px;
+                float: right;
             }
             
             
