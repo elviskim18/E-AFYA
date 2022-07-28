@@ -9,7 +9,12 @@ import axios from "axios";
 
 function Main (){
     const [patients ,setpatients] = useState([]);
-    const url = "http://localhost:8004/patients"
+    const url = "https://boiling-headland-76825.herokuapp.com/patients";
+    const initial = []
+
+    // const clearState = () => {
+    //     setpatients(patients);
+    //   };
 
 
     //get patients 
@@ -54,12 +59,28 @@ function Main (){
                 return pat.gender === str
             }
         })
-        
+       
         console.log("beferesetting me",newItems)
-        setpatients((newItems)=>newItems)
+        setpatients([]) //attempt to clear state
+        console.log("after setting empty", patients)
+        setpatients(newItems)
         console.log("aftersetting:",newItems)
         
         
+    }
+
+    //update
+    const updatePatient = async(id,object) =>{
+        try {
+            await axios.patch(`${url}/${id}`,object)
+            .then((res)=> getPatients())
+            // setpatients([...patients,object])
+        }
+        catch(error){
+            console.error(error)
+        }
+    
+
     }
     
 
@@ -74,7 +95,7 @@ function Main (){
     return(
         <div className="Main">
             <Routes>
-                <Route  path="/patientrecords" element={<PatientRecords patients={patients} getSearch={getSearch} filterPatients={filterPatients} />}/>
+                <Route  path="/patientrecords" element={<PatientRecords updatePatient={updatePatient} patients={patients} getSearch={getSearch} filterPatients={filterPatients} />}/>
             
             
                 <Route  path="/newpatient" element={<NewPatient  addNewpatient={addNewpatient}/>}/>

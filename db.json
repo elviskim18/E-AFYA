@@ -2,18 +2,18 @@
   "patients": [
     {
       "id": 1,
-      "name": "John Doe",
+      "name": "John Kamau",
       "gender": "male",
       "number": 254741791922,
       "dob": "2022-07-05",
-      "weight": 60,
+      "weight": "80",
       "bloodgroup": "A",
       "symptoms": "Mild Cough. High fever",
       "diagnosis": "Phenemonia"
     },
     {
       "id": 2,
-      "name": "Mary Doe",
+      "name": "Mary njeri",
       "gender": "male",
       "number": 254741780922,
       "dob": "2022-07-05",
@@ -24,7 +24,7 @@
     },
     {
       "id": 3,
-      "name": "Sarah Doe",
+      "name": "Sarah wewee",
       "gender": "female",
       "number": 254721780932,
       "dob": "2022-07-05",
@@ -35,28 +35,28 @@
     },
     {
       "id": 4,
-      "name": "Dan Doe",
+      "name": "Dan zzzzzzzzz",
       "gender": "male",
       "number": 254731780772,
       "dob": "2022-07-05",
-      "weight": 76,
+      "weight": "75",
       "bloodgroup": "B",
       "symptoms": "Mild Cough. High fever",
       "diagnosis": "Phenemonia"
     },
     {
       "id": 5,
-      "name": "Fred Doe",
+      "name": "Fred whoo",
       "gender": "male",
       "number": 254722768932,
       "dob": "2022-07-05",
-      "weight": 71,
+      "weight": "74",
       "bloodgroup": "AB",
       "symptoms": "Mild Cough. High fever",
       "diagnosis": "Phenemonia"
     },
     {
-      "name": "Martin Luke",
+      "name": "Martin njoto",
       "gender": "male",
       "number": "2547922222",
       "dob": "2022-07-17",

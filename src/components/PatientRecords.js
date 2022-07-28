@@ -1,16 +1,20 @@
 import React,{useState} from "react";
 import Patient from "./Patient";
+import axios from "axios";
 
 
 
-function PatientRecords ({patients,getSearch,filterPatients}){
+function PatientRecords ({patients,getSearch,filterPatients, updatePatient}){
     const [seachvalue , setsearchvalue] = useState("")
     const [selectedCategory, setSelectedCategory] = useState("all");
+    const [view ,setview] = useState(false)
+
     const [data, setdata] = useState({});
     const [visibility ,setvisibility] = useState(true)
-    const [view ,setview] = useState(false)
     
-
+    
+    
+    //search in
     function handleSearch(e){
         e.preventDefault();
         setsearchvalue(e.target.value)
@@ -27,14 +31,25 @@ function PatientRecords ({patients,getSearch,filterPatients}){
           const selekta = event.target.value
           filterPatients(selekta)
       }
-      //form view
-      function handleview(){
-          setview((view) => !view)
+
+      function handleEdit (e){
+          e.preventDefault()
+          console.log(data)
+          updatePatient(data.id,data)
       }
+
+      function handleChange(event){
+        const key = event.target.name;
+        const value = event.target.value;
+        setdata({...data, [key]:value})
+    
+      }
+
 
     return (
         <div>
             <h1 className="header">PATIENT RECORDS</h1>
+
             <div className="seafil">
 
                 <input type="text" placeholder= "Search" value={seachvalue} onChange={handleSearch}/>
@@ -46,11 +61,12 @@ function PatientRecords ({patients,getSearch,filterPatients}){
                 </select>
 
             </div>
+
             <div className="pRecords">
                 <div className="short">
 
                     {patients.map((patient)=>{
-                        return <Patient  key={patient.id}patient={patient} setdata={setdata} setvisibility={setvisibility} visibility={visibility}/>
+                        return <Patient  key={patient.id} patient={patient} setdata={setdata} setvisibility={setvisibility} visibility={visibility}/>
                     })}
                 </div>
                 
@@ -62,37 +78,37 @@ function PatientRecords ({patients,getSearch,filterPatients}){
                     <p>BLOODGROUP : {data.bloodgroup}</p>
                     <p>SYMPTOMS: {data.symptoms}</p>
                     <p>DIAGNOSIS: {data.diagnosis}</p>
-                    <button onClick={handleview}>UPDATE</button>
+                    <button onClick={() => setview((view) => !view)}>UPDATE</button>
                     
-                    <form style={view? {display:"block"} : {display: "none"}}>
+                    <form style={view? {display:"block"} : {display: "none"}} onSubmit={handleEdit}>
                         <div className="styleform">
     
                             <label>NAME
-                            <input value={data.name} type="text" name=""/>
+                            <input value={data.name} type="text" name="name" onChange={handleChange}/>
                             </label>
                             <label>GENDER
-                            <input value={data.gender} type="text" name=""/>
+                            <input value={data.gender} type="text" name="gender" onChange={handleChange}/>
                             </label>
                             <label>CONTACT
-                                <input value={data.number} type="text" name=""/>
+                                <input value={data.number} type="text" name="number" onChange={handleChange}/>
                             </label>
                             <label>DOB
-                                <input value={data.dob} type="date" name=""/>
+                                <input value={data.dob} type="date" name="dob" onChange={handleChange}/>
                             </label>
                             <label>WEIGHT
-                                <input value={data.weight} type="text" name=""/>
+                                <input value={data.weight} type="text" name="weight" onChange={handleChange} />
                             </label>
                             <label>BLOODGROUP
-                                <input value={data.bloodgroup} type="text" name=""/>
+                                <input value={data.bloodgroup} type="text" name="bloodgroup" onChange={handleChange}/>
                             </label>
                             <label>SYMPTOMS
-                                <input value={data.symptoms} type="text" name=""/>
+                                <input value={data.symptoms} type="text" name="symptoms" onChange={handleChange}/>
                             </label>
                             <label>DIAGNOSIS
-                                <input value={data.diagnosis} type="text" name=""/>
+                                <input value={data.diagnosis} type="text" name="diagnosis" onChange={handleChange}/>
                             </label>
                             
-                            <button>EDIT</button>
+                            <button >EDIT</button>
 
                         </div>
                         
