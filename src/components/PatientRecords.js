@@ -92,7 +92,7 @@ function PatientRecords ({patients,getSearch,filterPatients}){
                                 <input value={data.diagnosis} type="text" name=""/>
                             </label>
                             
-                            <button>edit</button>
+                            <button>EDIT</button>
 
                         </div>
                         
