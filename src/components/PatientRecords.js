@@ -65,11 +65,37 @@ function PatientRecords ({patients,getSearch,filterPatients}){
                     <button onClick={handleview}>UPDATE</button>
                     
                     <form style={view? {display:"block"} : {display: "none"}}>
-                        <input value={data.name} type="text" name=""/>
-                        <input value={data.gender} type="text" name=""/>
-                        <input value={data.number} type="text" name=""/>
-                        <input value={data.dob} type="date" name=""/>
-                        <button>edit</button>
+                        <div className="styleform">
+    
+                            <label>NAME
+                            <input value={data.name} type="text" name=""/>
+                            </label>
+                            <label>GENDER
+                            <input value={data.gender} type="text" name=""/>
+                            </label>
+                            <label>CONTACT
+                                <input value={data.number} type="text" name=""/>
+                            </label>
+                            <label>DOB
+                                <input value={data.dob} type="date" name=""/>
+                            </label>
+                            <label>WEIGHT
+                                <input value={data.weight} type="text" name=""/>
+                            </label>
+                            <label>BLOODGROUP
+                                <input value={data.bloodgroup} type="text" name=""/>
+                            </label>
+                            <label>SYMPTOMS
+                                <input value={data.symptoms} type="text" name=""/>
+                            </label>
+                            <label>DIAGNOSIS
+                                <input value={data.diagnosis} type="text" name=""/>
+                            </label>
+                            
+                            <button>edit</button>
+
+                        </div>
+                        
                     </form> 
 
                     
