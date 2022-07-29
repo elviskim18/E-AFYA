@@ -39,6 +39,7 @@ function PatientRecords ({patients,getSearch,filterPatients, updatePatient, dele
           e.preventDefault()
           console.log(data)
           updatePatient(data.id,data)
+          alert("User successfully Edited!")
           navigate("/patientrecords")
           
 
