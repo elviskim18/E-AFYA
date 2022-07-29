@@ -10,10 +10,11 @@
 
 ## Screenshots
 HOMEPAGE
-![image](/Assets/images/homepage.png)
-FAVOURITE DRINK
-![image](/Assets/images/favourite.png)
-
+![image](/public/homepage.png)
+ADD NEW PATIENT
+![image](/public/addNewPatient.png)
+PATIENT RECORDS
+![image](/public/records.png)
 
 ## Table of content
 - [Technologies]
