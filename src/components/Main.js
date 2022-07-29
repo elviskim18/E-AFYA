@@ -85,6 +85,7 @@ function Main (){
         let update = patients.filter((pat) => pat.id !== id)
         setpatients(update);
         axios.delete(`${url}/${id}`)
+        
 
     }
     

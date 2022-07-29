@@ -53,7 +53,10 @@ function PatientRecords ({patients,getSearch,filterPatients, updatePatient, dele
       //handle delete
       function handleDelete (){
         deletePatient(data.id)
-        navigate("/")
+        alert("User deleted Successfully")
+        setdata("")
+
+        
 
       }
 

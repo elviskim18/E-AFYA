@@ -30,6 +30,7 @@ function NewPatient ({addNewpatient}){
     function handleSubmit(event){
         event.preventDefault();
         addNewpatient(formdata)
+        alert("User added Successfully")
         navigate("/patientrecords")
         
         console.log(formdata)
