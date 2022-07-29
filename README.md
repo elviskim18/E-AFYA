@@ -1,70 +1,88 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Author 
 
-## Available Scripts
+**ELVIS KIMANI**
 
-In the project directory, you can run:
 
-### `npm start`
+## PROJECT DESCRIPTION
+- E-AFYA: is a web application that provides a hospital with tools to manage patients records easily. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Screenshots
+HOMEPAGE
+![image](/Assets/images/homepage.png)
+FAVOURITE DRINK
+![image](/Assets/images/favourite.png)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Table of content
+- [Technologies]
+- [Description]
+- [Features]
+- [Setup-process]
+- [Project-usage]
+- [Copyright]
+- [Licence]
 
-### `npm run build`
+## Technologies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+languages used are:
+- REACT 
+- HTML 
+- SASS
+- Javascript 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Features
+* As a user(doctor) you are able to:
+    - Enroll a new patient
+    - View all the patients in the system
+    - Edit a patients record
+    - Search for a specific user
+    - Filter out patients as per gender
+    - Delete a patient record
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Description
+The site makes API calls to manipulate user records
 
-### `npm run eject`
+*** 
+## How to set up and run the project
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Requirements
+* node
+* npm
+* git
+* IDE
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### Set up
+clone the repo using the command
+- $git clone https://github.com/elviskim18/E-AFYA.git
+change directory using command
+- $cd e-afya
+- code .
+- run npm install
+- run npm run server
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+#### live link
+ - run the following live link in your browser  https://e-afaya.herokuapp.com/
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+***
+## How to use the project
 
-### Code Splitting
+The project contains several necessary folders. **public** contains the main index file that all the app runs from. The **src** folder contains the **components** folder that holds all the components running our SPA. We also have a CSS folder that holds **SASS** files ment for styling our components. The db.json file is a copy of our local server that holds all the patients data.
+***
+### Contributing to the project
+Fork the repo. Create a new branch in your terminal(git checkout -b improve-feature). Install the prerequisites. Make appropriate changes in file(s). Add the changes and commit them (git commit -am "improvements"). Push to the branch and create a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+***
+## Copyright
+ Copyright(c)[2022][ELVIS KIMANI]
 
-### Analyzing the Bundle Size
+***
+## Licence
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+MIT Licence
+***

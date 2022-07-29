@@ -1,6 +1,7 @@
 import React from "react";
 import {NavLink } from "react-router-dom";
-import { FaUserCircle, FaHandHoldingMedical} from "react-icons/fa";
+import { FaHandHoldingMedical} from "react-icons/fa";
+
 
 
 
@@ -14,7 +15,8 @@ function Nav (){
           </span>
         </h1>
         <div className="profile">
-          <h3><span><FaUserCircle /></span>Paul kimani</h3>
+          <h3><span><img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGRvY3RvcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="profileimage"/></span>Rohan Patel</h3>
+          
         </div>
         <div className="Navlinks">
           <NavLink to="/"  className="linkstyles">
